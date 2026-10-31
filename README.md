@@ -50,16 +50,20 @@ adaptive-quiz-tool/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - [Node.js](https://nodejs.org/) (v18 or higher)
 - [MongoDB](https://www.mongodb.com/) (Local instance running on `mongodb://localhost:27017` or a free MongoDB Atlas URI)
 
 ### 1. Setup Backend
+
 ```bash
 cd server
 npm install
 cp .env.example .env
 ```
+
 Ensure `.env` has your MongoDB connection string:
+
 ```ini
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/adaptive_quiz_db
@@ -68,21 +72,27 @@ CLIENT_URL=http://localhost:5173
 ```
 
 ### 2. Seed Question Bank & Demo Users
+
 ```bash
 npm run seed
 ```
+
 This populates 25+ curated questions in Math and Science (Easy, Medium, Hard) and creates two demo accounts:
+
 - **Demo Student:** Roll Number `STUDENT01`, PIN `1234`
 - **Demo Teacher:** ID `TEACHER01`, Password `admin123`
 
 ### 3. Start Backend Server
+
 ```bash
 npm run dev
 # Server runs on http://localhost:5000
 ```
 
 ### 4. Setup & Start Frontend Client
+
 In a new terminal window:
+
 ```bash
 cd client
 npm install
@@ -93,6 +103,7 @@ npm run dev
 ---
 
 ## 🎯 Key Application Flow
+
 1. **Login:** Student signs in with Roll Number & PIN (no email needed).
 2. **Subject Selection:** Choose Math or Science.
 3. **Diagnostic Pre-Test:** Complete a 15-question baseline quiz. The system tags topics $<60\%$ as `Needs Focus`.
@@ -101,3 +112,5 @@ npm run dev
    - 2 wrong in a row $\rightarrow$ De-escalates difficulty to reinforce basics.
    - Instant mistake feedback shows plain-language step-by-step explanations.
 5. **Post-Test & Report:** After completing 50 practice questions, the student unlocks the Post-Test and receives a side-by-side **Learning Growth Report** with verified percentage gains.
+
+# Community-service
